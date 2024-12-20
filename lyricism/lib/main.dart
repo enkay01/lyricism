@@ -6,7 +6,7 @@ void main() {
 }
 
 class QuotesGridApp extends StatelessWidget {
-  const QuotesGridApp({Key? key}) : super(key: key);
+  const QuotesGridApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class QuotesGridApp extends StatelessWidget {
 }
 
 class QuotesGridPage extends StatelessWidget {
-  const QuotesGridPage({Key? key}) : super(key: key);
+  const QuotesGridPage({super.key});
 
   final List<Map<String, String>> quotes = const [
     {
@@ -142,7 +142,7 @@ class QuotesGridPage extends StatelessWidget {
 class QuoteDetailPage extends StatelessWidget {
   final Map<String, String> quote;
 
-  const QuoteDetailPage({Key? key, required this.quote}) : super(key: key);
+  const QuoteDetailPage({super.key, required this.quote});
 
   @override
   Widget build(BuildContext context) {
@@ -161,14 +161,6 @@ class QuoteDetailPage extends StatelessWidget {
             Text(
               '${quote['message']}',
               style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-            ),
-            const Spacer(),
-            Center(
-              child: QrImage(
-                data: quote['spotifyUrl']!,
-                version: QrVersions.auto,
-                size: 200.0,
-              ),
             ),
             const SizedBox(height: 16),
             Center(
