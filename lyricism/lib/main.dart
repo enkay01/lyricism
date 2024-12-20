@@ -162,6 +162,7 @@ class QuoteDetailPage extends StatelessWidget {
               '${quote['message']}',
               style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
             ),
+            const Spacer(),
             const SizedBox(height: 16),
             Center(
               child: ElevatedButton(
