@@ -163,6 +163,13 @@ class QuoteDetailPage extends StatelessWidget {
               style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
             ),
             const Spacer(),
+            Center(
+              child: QrImageView(
+                data: quote['spotifyUrl']!,
+                version: QrVersions.auto,
+                size: 200.0,
+              ),
+            ),
             const SizedBox(height: 16),
             Center(
               child: ElevatedButton(
